@@ -1,0 +1,23 @@
+{
+  "rules": {
+    "testDb": {
+      ".read": "true"
+    },
+    "users": {
+      "$userId": {
+        ".write": "auth !== null && (!data.exists() || auth.uid === $userId)",
+        "name": {
+          ".validate": "newData.exists() && newData.isString()",
+          ".read": "auth.uid === $userId"
+        }
+      }
+    },
+    "parties": {
+      "$partyId": {
+        ".write": "auth !== null && (!data.exists() || data.child('members').child(auth.uid).child('role').val() === 'gm')",
+        ".validate": "!newData.exists() || newData.child('members').child(auth.uid).child('role').val() === 'gm'",
+        "balance": {}
+      }
+    }
+  }
+}
