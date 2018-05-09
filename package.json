@@ -1,0 +1,23 @@
+{
+  "name": "hirelings-api",
+  "version": "0.0.1",
+  "description": "Back-end for the Hirelings App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrotherKristoph/hirelings-api.git"
+  },
+  "author": "Chris Kraljevic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BrotherKristoph/hirelings-api/issues"
+  },
+  "homepage": "https://github.com/BrotherKristoph/hirelings-api#readme",
+  "devDependencies": {
+    "firebase-tools": "^3.18.4",
+    "polymer-cli": "^1.7.0"
+  }
+}

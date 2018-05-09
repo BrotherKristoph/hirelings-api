@@ -1,12 +1,16 @@
 const functions = require('firebase-functions');
+const firebase = require('firebase-admin');
+const cors = require('cors')({origin: true});
+firebase.initializeApp(functions.config().firebase);
 
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-// exports.helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
+exports.testDb = functions.https.onRequest((req, res) => {
 
-exports.helloWorld = functions.https.onRequest((request, response) => {
-    response.send("Hello from Firebase!");
+    return cors(req, res, () => {
+        res.status(200).send('Hello World!');
+
+        // firebase.database().ref('testDb').once('value').then(snapshot => {
+        //     responseData = JSON.stringify(snapshot.val());
+        //     res.send(responseData);
+        // });
+    });
 });
