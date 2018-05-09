@@ -4,7 +4,12 @@
   "description": "Back-end for the Hirelings App",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "firebase deploy",
+    "deploy:hosting": "firebase deploy --only hosting",
+    "deploy:firestore": "firebase deploy --only firestore",
+    "deploy:firestore:rules": "firebase deploy --only firestore:rules",
+    "deploy:storage": "firebase deploy --only storage"
   },
   "repository": {
     "type": "git",

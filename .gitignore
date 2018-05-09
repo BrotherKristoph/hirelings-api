@@ -3,3 +3,4 @@ functions/package-lock.json
 node_modules
 package-lock.json
 hosting/public
+hosting/bower_components
