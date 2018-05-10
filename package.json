@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "firebase deploy",
-    "deploy:hosting": "firebase deploy --only hosting",
     "deploy:firestore": "firebase deploy --only firestore",
     "deploy:firestore:rules": "firebase deploy --only firestore:rules",
     "deploy:storage": "firebase deploy --only storage"
@@ -22,7 +21,6 @@
   },
   "homepage": "https://github.com/BrotherKristoph/hirelings-api#readme",
   "devDependencies": {
-    "firebase-tools": "^3.18.4",
-    "polymer-cli": "^1.7.0"
+    "firebase-tools": "^3.18.4"
   }
 }
