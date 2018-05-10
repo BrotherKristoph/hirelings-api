@@ -1,6 +1,12 @@
-service cloud.firestore {
+'use strict';
+
+const rules = `service cloud.firestore {
     match /databases/{database}/documents {
         match /{document=**} {
+            allow read, write: if false;
+        }
+
+        match /{collection} {
             allow read, write: if false;
         }
 
@@ -214,3 +220,8 @@ service cloud.firestore {
         }
     }
 }
+`;
+
+module.exports = {
+    rules
+};
