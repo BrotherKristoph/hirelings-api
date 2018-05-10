@@ -1,7 +1,0 @@
-{
-  "name": "hirelings-app",
-  "short_name": "hirelings-app",
-  "description": "A polymer 2 webapp for RPG hirelings",
-  "start_url": "/",
-  "display": "standalone"
-}
